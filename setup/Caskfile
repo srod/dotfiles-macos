@@ -1,0 +1,34 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+
+cask "alfred"
+cask "brave-browser"
+cask "firefox"
+cask "google-chrome"
+cask "gpg-suite"
+cask "iina"
+cask "imageoptim"
+cask "insync"
+cask "istat-menus"
+cask "iterm2"
+cask "kaleidoscope"
+cask "keybase"
+cask "malwarebytes"
+cask "moneydance"
+cask "onyx"
+cask "openmtp"
+cask "plex"
+cask "spotify"
+cask "standard-notes"
+cask "sublime-text"
+cask "visual-studio-code"
+
+# App Store
+mas "Bitwarden", id: 1352778147
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft Powerpoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+mas "Pocket", id: 568494494
+mas "Reeder", id: 880001334
+mas "Tweetbot", id: 557168941
