@@ -5,10 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-DOTFILES=$HOME/.dotfiles
+export DOTFILES=$HOME/.dotfiles
 DOTFILES_SHELL=$DOTFILES/shell
-DOTFILES_IDE="code"
-# DOTFILES_GIT_GUI="stree"
 ZSH=$DOTFILES_SHELL/oh-my-zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_CUSTOM=$DOTFILES_SHELL/zsh

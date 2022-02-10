@@ -17,7 +17,6 @@ sub_help () {
 
 sub_edit () {
   sh -c "$DOTFILES_IDE $DOTFILES"
-  # sh -c "$DOTFILES_GIT_GUI $DOTFILES"
 }
 
 sub_update () {
