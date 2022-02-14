@@ -13,7 +13,7 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 defaults write -g 'InitialKeyRepeat_Level_Saved' -int 10
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain KeyRepeat -int 3
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Disable automatic capitalization as it’s annoying when typing code
