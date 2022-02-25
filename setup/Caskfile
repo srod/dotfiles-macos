@@ -3,7 +3,7 @@ tap "homebrew/cask"
 tap "homebrew/core"
 
 # cask "alfred"
-cask "authy"
+# cask "authy"
 cask "brave-browser"
 cask "firefox"
 cask "font-fira-code"
