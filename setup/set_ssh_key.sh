@@ -6,4 +6,4 @@ echo "==> Generating an SSH key"
 
 read -r -p "Email: " email
 
-ssh-keygen -t rsa -b 4096 -C \""$email"\"
+ssh-keygen -t rsa -b 4096 -C "$email"
