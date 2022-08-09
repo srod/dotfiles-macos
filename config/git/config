@@ -148,3 +148,6 @@
     renames = copies
     # external = git-external-patdiff
     tool = Code
+
+[url "git@github.com:"]
+    insteadOf = git://github.com/
