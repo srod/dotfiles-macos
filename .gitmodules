@@ -12,7 +12,7 @@
   ignore = dirty
 [submodule "shell/zsh/plugins/zsh-autosuggestions"]
   path = shell/zsh/plugins/zsh-autosuggestions
-  url = git://github.com/zsh-users/zsh-autosuggestions
+  url = https://github.com/zsh-users/zsh-autosuggestions.git
   ignore = dirty
 [submodule "shell/zsh/plugins/zsh-better-npm-completion"]
   path = shell/zsh/plugins/zsh-better-npm-completion
