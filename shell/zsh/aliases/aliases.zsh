@@ -6,7 +6,7 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias vi="$HOMEBREW_PREFIX/bin/vim"
 alias vim="$HOMEBREW_PREFIX/bin/vim"
-alias cat="bat"
+# alias cat="bat"
 
 # Rosetta
 alias brewr="arch -x86_64 /usr/local/bin/brew $@
