@@ -2,7 +2,6 @@ tap "homebrew/bundle"
 
 brew "bat"
 brew "coreutils"
-brew "diff-so-fancy"
 brew "findutils"
 brew "grep"
 brew "htop"
