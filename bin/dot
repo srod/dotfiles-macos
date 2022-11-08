@@ -8,10 +8,9 @@ sub_help () {
   echo "Usage: $BIN_NAME <command>"
   echo
   echo "Commands:"
-  echo "   clean            Clean up caches (brew, gem)"
+  # echo "   clean            Clean up caches (brew, gem)"
   echo "   edit             Open dotfiles in IDE ($DOTFILES_IDE)"
   echo "   help             This help message"
-  echo "   macos            Apply macOS system defaults"
   echo "   update           Update packages and pkg managers (OS, brew, npm)"
 }
 
@@ -20,22 +19,15 @@ sub_edit () {
 }
 
 sub_update () {
-  sudo softwareupdate -i -a
-  brew update
-  brew upgrade
-  brew cleanup
+  sudo apt update
+  sudo apt upgrade
   npm install npm -g
   npm update -g
 }
 
-sub_clean () {
-  brew cleanup
-}
-
-sub_macos () {
-  . "${DOTFILES}/setup/macos/main.sh"
-  echo "Done. Some changes may require a logout/restart to take effect."
-}
+# sub_clean () {
+#   brew cleanup
+# }
 
 case $COMMAND_NAME in
   "" | "-h" | "--help")

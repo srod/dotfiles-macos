@@ -26,10 +26,6 @@
   path = shell/zsh/plugins/zsh-completions
   url = https://github.com/zsh-users/zsh-completions
   ignore = dirty
-[submodule "dotbot-brewfile"]
-  path = dotbot-brewfile
-  url = https://github.com/sobolevn/dotbot-brewfile.git
-  ignore = dirty
 [submodule "vim/vim/bundle/vim-pathogen"]
   path = vim/vim/bundle/vim-pathogen
   url = https://github.com/tpope/vim-pathogen.git

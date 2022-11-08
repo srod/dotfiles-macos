@@ -10,15 +10,12 @@ DOTFILES_SHELL=$DOTFILES/shell
 ZSH=$DOTFILES_SHELL/oh-my-zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_CUSTOM=$DOTFILES_SHELL/zsh
-HOMEBREW_PREFIX=/opt/homebrew
-
-eval $(/opt/homebrew/bin/brew shellenv)
 
 # Source custom functions
 source $DOTFILES_SHELL/zsh/functions/*.zsh
 
 # Plugins list
-plugins=(zsh-completions zsh-autosuggestions zsh-better-npm-completion zsh-syntax-highlighting history-substring-search jsontools sudo urltools web-search brew git gpg-agent ssh-agent sublime macos node npm nvm vscode yarn pawel-nvm)
+plugins=(zsh-completions zsh-autosuggestions zsh-better-npm-completion zsh-syntax-highlighting history-substring-search sudo urltools web-search brew git node npm nvm yarn pawel-nvm)
 
 # Setup plugin `history-substring-search`
 zmodload zsh/terminfo
@@ -30,5 +27,3 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path bash)"

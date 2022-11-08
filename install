@@ -3,7 +3,6 @@
 set -e
 
 CONFIG="setup/install.conf.yaml"
-CONFIG2="setup/brew.conf.yaml"
 DOTBOT_DIR="dotbot"
 
 DOTBOT_BIN="bin/dotbot"
@@ -20,16 +19,8 @@ git config --global url."git@github.com:".insteadOf git://github.com/
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-if ! command -v brew >/dev/null; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  eval "$(echo 'eval $(/opt/homebrew/bin/brew shellenv)')"
-fi
-
 source "${BASEDIR}/setup/nvm.sh"
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" --plugin-dir dotbot-brewfile -c "${CONFIG2}" "${@}"
-
-source "${BASEDIR}/setup/macos/main.sh"
 
 source "${BASEDIR}/setup/set_ssh_key.sh"
