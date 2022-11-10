@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+
+BIN_NAME=$(basename "$0")
+COMMAND_NAME=$1
+
+sub_help () {
+  echo "Usage: $BIN_NAME <command>"
+  echo
+  echo "Commands:"
+  echo "   down             Stop containers"
+  echo "   help             This help message"
+  echo "   logs             Show containers logs"
+  echo "   pull             Update containers"
+  echo "   up               Start containers"
+}
+
+sub_down () {
+  docker compose stop
+}
+
+sub_logs () {
+  docker compose logs -tf --tail="50"
+}
+
+sub_pull () {
+  docker compose pull
+}
+
+sub_up () {
+  docker compose up -d
+}
+
+# sub_docker () {
+#   case $SUB_COMMAND_NAME in
+#   "" | "help" | "-h" | "--help")
+#     sub_help_docker
+#     ;;
+
+#   "up")
+#   docker compose up -d
+#   ;;
+
+#  "down")
+#   docker compose stop
+#   ;;
+
+#   "pull")
+#   docker compose pull
+#   ;;
+
+#   "logs")
+#   docker compose logs -tf --tail="50"
+#   ;;
+
+#   *)
+#     echo "'$COMMAND_NAME $SUB_COMMAND_NAME' is not a known command or has errors." >&2
+#     sub_help_docker
+#     exit 1
+#     ;;
+#   esac
+# }
+
+case $COMMAND_NAME in
+  "" | "-h" | "--help")
+    sub_help
+    ;;
+  *)
+    shift
+    sub_${COMMAND_NAME} $@
+    if [ $? = 127 ]; then
+      echo "'$COMMAND_NAME' is not a known command or has errors." >&2
+      sub_help
+      exit 1
+    fi
+    ;;
+esac
