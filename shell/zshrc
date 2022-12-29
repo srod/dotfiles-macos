@@ -18,7 +18,7 @@ eval $(/opt/homebrew/bin/brew shellenv)
 source $DOTFILES_SHELL/zsh/functions/*.zsh
 
 # Plugins list
-plugins=(zsh-completions zsh-autosuggestions zsh-better-npm-completion zsh-syntax-highlighting history-substring-search jsontools sudo urltools web-search brew git gpg-agent ssh-agent sublime macos node npm nvm vscode yarn pawel-nvm)
+plugins=(zsh-completions zsh-autosuggestions zsh-better-npm-completion zsh-syntax-highlighting history-substring-search jsontools sudo urltools web-search brew git gpg-agent ssh-agent sublime macos node npm vscode)
 
 # Setup plugin `history-substring-search`
 zmodload zsh/terminfo

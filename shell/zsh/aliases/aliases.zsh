@@ -6,11 +6,6 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias vi="$HOMEBREW_PREFIX/bin/vim"
 alias vim="$HOMEBREW_PREFIX/bin/vim"
-# alias cat="bat"
-
-# Rosetta
-alias brewr="arch -x86_64 /usr/local/bin/brew $@
-alias leg="arch -x86_64 $@
 
 # Navigation
 alias cdf="cd `osascript -e 'tell application \"Finder\" to if window 1 exists then if target of window 1 as string is not \":\" then get POSIX path of (target of window 1 as alias)'`"
@@ -22,17 +17,11 @@ alias pid="ps x | grep -i $1"
 alias grep="grep --color=auto"
 alias aliases="code $DOTFILES/src/shell/zsh/aliases/aliases.zsh"
 
-# Update
-alias brewup="brew update; brew upgrade; brew cleanup"
-alias npmup="npm -g update; npm install -g npm"
-alias sysup="sudo softwareupdate -i -a"
-alias update="brewup; npmup; sysup"
-
 # Network
 alias network.ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias network.iplocal="ipconfig getifaddr en0"
 alias network.ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
-alias network.speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
+alias network.speedtest="speedtest --server-id=2231"
 alias network.ping='prettyping --nolegend'
 alias ping=network.ping
 alias network.flush="dscacheutil -flushcache && sudo killall -HUP mDNSResponder && echo 'DNS flushed'"
