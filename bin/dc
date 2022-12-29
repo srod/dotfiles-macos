@@ -27,7 +27,7 @@ sub_pull () {
 }
 
 sub_up () {
-  docker compose up -d
+  docker compose up -d --remove-orphans
 }
 
 # sub_docker () {
