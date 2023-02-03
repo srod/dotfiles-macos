@@ -154,3 +154,6 @@
 
 [url "git@github.com:"]
     insteadOf = git://github.com/
+
+[add "interactive"]
+    useBuiltin = false
