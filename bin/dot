@@ -24,8 +24,8 @@ sub_update () {
   brew update
   brew upgrade
   brew cleanup
-  npm install npm -g
-  npm update -g
+  pnpm install npm -g
+  pnpm update -g
 }
 
 sub_clean () {
