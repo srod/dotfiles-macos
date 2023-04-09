@@ -10,7 +10,7 @@ cask "google-chrome"
 cask "gpg-suite"
 cask "imageoptim"
 cask "iterm2"
-cask "keybase"
+#cask "keybase"
 cask "keepingyouawake"
 cask "libreoffice"
 cask "libreoffice-language-pack"
@@ -26,7 +26,7 @@ cask "visual-studio-code"
 
 # App Store
 mas "Bitwarden", id: 1352778147
-mas "Edison Mail", id: 1489591003
+# mas "Edison Mail", id: 1489591003
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft Powerpoint", id: 462062816
 mas "Microsoft Word", id: 462054704
